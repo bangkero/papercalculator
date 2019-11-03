@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html>
+
+         <head>
+		 
+		 <title>Reel Calculator</title>
+	
+	        
+				<meta charset="UTF-8">
+		
+	
+		<style> 
+
+                            #fascia1:first-of-type::-webkit-inner-spin-button, 
+			    #fascia1:first-of-type::-webkit-outer-spin-button
+                                 {-webkit-appearance: none; 
+				 margin: 0; }
+
+                             #fascia2:first-of-type::-webkit-inner-spin-button, 
+			     #fascia2:first-of-type::-webkit-outer-spin-button
+                                 {-webkit-appearance: none; 
+				 margin: 0; }
+
+                             #fascia3:first-of-type::-webkit-inner-spin-button, 
+			     #fascia3:first-of-type::-webkit-outer-spin-button
+                                 {-webkit-appearance: none; 
+				 margin: 0; }
+
+                                 #fascia4:first-of-type::-webkit-inner-spin-button, 
+			    #fascia4:first-of-type::-webkit-outer-spin-button
+                                 {-webkit-appearance: none; 
+				 margin: 0; }
+                             #fascia5:first-of-type::-webkit-inner-spin-button, 
+			     #fascia5:first-of-type::-webkit-outer-spin-button
+                                 {-webkit-appearance: none; 
+				 margin: 0; }
+
+				 #zamora:first-of-type::-webkit-inner-spin-button, 
+			     #zamora:first-of-type::-webkit-outer-spin-button
+                                 {-webkit-appearance: none; 
+				 margin: 0; }
+
+                  	 input[type="number"] {
+    -moz-appearance: textfield;}
+
+
+
+		            input:focus {background-color:yellow;}
+                     
+                           
+
+
+
+
+
+		</style>
+		
+	
+
+
+	
+		<title>multiple rolls</title>
+		
+	</head>
+<script src="../js/tagli.js"></script>
+
+        <body bgcolor="#96D5DD  ">
+
+                <br>
+		
+		
+		
+              
+                 <input id="zamora" type="number"    min="0" maxlength="10000" style="font-size:20px" autocomplete="off"  placeholder="Carte Dozio" >
+                 <button type="button" onclick="reSet()">RESET</button>
+		<br>
+		<br>
+		<br>
+
+
+<div class="tina">
+		<center>
+				
+		<table>
+
+
+                        <tr align="right">
+				
+				<td width="50" align="center">
+					<b><font color="darkgreen" size ="5">Fascia/Misura</font>                                       
+				</td>
+                                <td width="50" align="center">
+					<b><font color="darkgreen" size ="5">Numeri/Rotoli</font>                                       
+				</td>
+                                <td width="75" align="center">
+					<b><font color="darkgreen" size ="5">Rotoli </font>
+				</td>
+
+                                <td width="50" align="center">
+					<b><font color="darkgreen" size ="5">Peso</font>                                       
+				</td>
+                       </tr>		
+				
+			
+			<tr align="right">
+				
+				<td width="50">
+					<input id="fascia1" type="number" placeholder="mm " min="0" maxlength="3" style="font-size:20px" autocomplete="off" onfocusout="comPeso1(event)">
+
+                                      
+				</td>
+                                <td width="50">
+					<input id="num1" type="number"  value="1"  min="1" maxlength="3" style="font-size:20px"autocomplete="off" oninput="comPeso1(event)">                                       
+				</td>
+                                <td width="75" align="center">
+					<b><font color="darkpink" size ="4" id="rot1">0</font>
+				</td>
+                                <td width="100" align="center">
+					<b><font color="blue" size ="4"  id="peso1">kg</font>                                       
+				</td>
+		
+
+			</tr>
+			<tr align="right">
+				
+				<td width="50">
+					<input id="fascia2" type="number"   placeholder="mm" min="0" maxlength="3" style="font-size:20px"autocomplete="off" onfocusout="comPeso2(event)">                                       
+				</td>
+                                <td width="50">
+					<input id="num2" type="number"  value="1" min="1" maxlength="3" style="font-size:20px"autocomplete="off" oninput="comPeso2(event)">                                       
+				</td>
+                                <td width="75" align="center">
+					<b><font color="darkpink" size ="4"   id="rot2">0</font>
+				</td>
+                                <td width="50" align="center">
+					<b><font color="blue" size ="4"  id="peso2">kg</font>                                       
+				</td>
+
+		
+
+			</tr>
+			<tr align="right">
+				
+				<td width="50">
+					<input id="fascia3" type="number"   placeholder="mm" min="0" maxlength="3" style="font-size:20px"autocomplete="off" onfocusout="comPeso3(event)">                                       
+				</td>
+                                <td width="50">
+					<input id="num3" type="number"  value="1" min="1" maxlength="3" style="font-size:20px"autocomplete="off" oninput="comPeso3(event)">                                       
+				</td>
+                                <td width="75" align="center">
+					<b><font color="darkpink" size ="4"  id="rot3">0</font>
+      				</td>
+                                <td width="50" align="center">
+					<b><font color="blue" size ="4" id="peso3">kg</font>                                       
+				</td>
+
+		
+
+			</tr>
+			
+
+			</tr>
+			<tr align="right">
+				
+				<td width="50">
+					<input id="fascia4" type="number"   placeholder="mm " min="0" maxlength="3" style="font-size:20px"autocomplete="off" onfocusout="comPeso4(event)">                                       
+				</td>
+                                <td width="50">
+					<input id="num4" type="number"   value="1" min="1" maxlength="3" style="font-size:20px"autocomplete="off" oninput="comPeso4(event)">                                       
+				</td>
+                                <td width="75" align="center">
+					<b><font color="darkpink" size ="4" id="rot4">0</font>
+				</td>
+                                <td width="50" align="center">
+					<b><font color="blue" size ="4"  id="peso4">kg</font>                                       
+				</td>
+
+
+		
+
+			</tr>
+                        <tr align="right">
+				
+				<td width="50">
+					<input id="fascia5" type="number"   placeholder="mm" min="0" maxlength="3" style="font-size:20px"autocomplete="off" onfocusout="comPeso5(event)">                                       
+				</td>
+                                <td width="50">
+					<input id="num5" type="number"  value="1" min="1" maxlength="3" style="font-size:20px"autocomplete="off" oninput="comPeso5(event)">                                       
+				</td>
+                                <td width="75" align="center">
+					<b><font color="darkpink" size ="4"  id="rot5">0</font>
+				</td>
+                                <td width="50" align="center">
+					<b><font color="blue" size ="4"   id="peso5">kg</font>                                       
+				</td>
+
+
+		
+
+			</tr>
+			</table>
+                        <table>
+			
+
+                       <br>
+		       
+		       
+		      
+
+                      <tr align="right">
+
+                                 <td width="100" align="center">
+					<b><font color="blue" size ="4" ># Taglio</font>
+				</td>		
+
+  
+				
+				<td width="50">
+					<input id="taglio" type="number"  value="1"  min="1"  maxlength="3" style="font-size:20px"autocomplete="off"  oninput="comPesotagli(event)">                                       
+				</td>
+                                <td width="200" align="center">
+					<b><font color="blue" size ="4">Rifilo/Scarto -->>></font>
+				</td>		
+                               
+
+                                <td width="150" align="center">
+					<b><font color="darkpink" size ="5" id="scarto">kg</font>
+				</td>		
+
+			</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</table>
+
+
+
+
+
+
+
+
+
+
+	</center>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
+
+
+        </body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

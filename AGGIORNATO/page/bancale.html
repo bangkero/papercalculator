@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Pallet Calculator</title>
+	
+	 <meta charset="UTF-8">
+		<script>
+							var aFace, bFace, cFace, dFace, eFace, aRot, bRot, cRot, dRot, eRot;
+							var activeRot=parseInt(sessionStorage.getItem("rot1"));
+							var luca="A";
+							var albini;
+							var LaCapa=4;
+							var activeFace=parseInt(sessionStorage.getItem("face1") );
+
+                      function tina(){
+							aFace= parseInt(sessionStorage.getItem("face1"));
+                            bFace= parseInt(sessionStorage.getItem("face2"))
+                            cFace= parseInt(sessionStorage.getItem("face3"))
+                            dFace= parseInt(sessionStorage.getItem("face4"))
+                            eFace= parseInt(sessionStorage.getItem("face5"))
+							aRot=parseInt(sessionStorage.getItem("rot1"))
+							bRot=parseInt(sessionStorage.getItem("rot2"))
+							cRot=parseInt(sessionStorage.getItem("rot3"))
+							dRot=parseInt(sessionStorage.getItem("rot4"))
+							eRot=parseInt(sessionStorage.getItem("rot5"));
+                            luca=document.getElementById("valen").value
+								switch(luca) {
+									case "A":
+										activeFace=aFace;
+										activeRot=aRot;
+										break;
+									case "B":
+										activeFace=bFace;
+										activeRot=bRot;
+										break;
+									case "C":
+										activeFace=cFace;
+										activeRot=cRot;
+										break;
+									case "D":
+										activeFace=dFace;
+										activeRot=dRot;
+										break;
+									case "E":
+										activeFace=eFace;
+										activeRot=eRot;
+										break;
+									case "L":
+										clearInterval(albini);
+										activeFace="";
+										activeRot="";
+										break;
+										};
+							if(isNaN(activeFace)){
+								document.getElementById("fascia").value="";
+							} else { 
+								document.getElementById("fascia").value=activeFace
+		
+							}
+							if(isNaN(activeRot)){
+								document.getElementById("rotoli").value="";
+							} else { 
+								document.getElementById("rotoli").value=activeRot
+		
+							};
+		
+		
+		
+		
+		
+		
+							
+							
+                                    var fascia=document.getElementById("fascia").value
+									var rotoli=document.getElementById("rotoli").value
+									var rotoliperpiano=document.getElementById("rotoliperpiano").value
+									var numerobancale=document.getElementById("numerobancale").value
+									var pila=Math.floor(rotoli/ (rotoliperpiano*numerobancale));
+									var remainder=(rotoli%(rotoliperpiano*numerobancale));
+									var rotolibancale=(pila*rotoliperpiano);
+									var altezza=pila*fascia;
+							document.getElementById("altezza").innerHTML=altezza+ " mm";
+							document.getElementById("rotolibancale").innerHTML=rotolibancale+ " rot";
+							document.getElementById("remainder").innerHTML=remainder+ " rot";
+							document.getElementById("pila").innerHTML=pila + " rot";
+									}
+                       function calculate(){
+									var fascia=document.getElementById("fascia").value
+									var rotoli=document.getElementById("rotoli").value
+									var rotoliperpiano=document.getElementById("rotoliperpiano").value
+									var numerobancale=document.getElementById("numerobancale").value
+									var pila=Math.floor(rotoli/ (rotoliperpiano*numerobancale));
+									var remainder=(rotoli%(rotoliperpiano*numerobancale));
+									var rotolibancale=(pila*rotoliperpiano);
+									var altezza=pila*fascia;
+									
+                            document.getElementById("altezza").innerHTML=altezza+ " mm";
+							
+							document.getElementById("rotolibancale").innerHTML=rotolibancale+ " rot";
+                         	document.getElementById("remainder").innerHTML=remainder+ " rot";
+                        	document.getElementById("pila").innerHTML=pila + " rot";
+                                           }
+						function mout(){
+							document.getElementById("pics").style.display="none"
+							document.getElementById("cal").style.display="block"
+							albini=setInterval(tina,1000);
+                            document.getElementById("rotoliperpiano").value=LaCapa;
+										}
+						function changeimage(){
+									var num= Math.floor((Math.random() * 22) + 1);
+									//var num= Math.floor(Math.random()*( 207-201+1)+201);
+									//var num=200
+                            document.getElementById("valentina").src="../image/"+num+".jpg";
+												}
+						function mover()
+					{
+							document.getElementById("pics").style.display="block"
+							document.getElementById("cal").style.display="none"
+					}
+						function all()	{
+							mover();
+							setInterval(changeimage(), 4000);
+							setInterval(function(){ changeimage(); }, 3000);
+					}
+						function reSet()	{
+                            document.getElementById("fascia").value = parseInt(sessionStorage.getItem("face1"));
+                            document.getElementById("rotoli").value = parseInt(sessionStorage.getItem("rot1"));
+                            document.getElementById("rotoliperpiano").focus();
+                                        }
+										
+						function md()  {
+							
+							 document.getElementById("valentina").src="../image/"+200+".jpg";
+						
+					}				
+ 	   </script>          
+		<style> 
+                            .leonaromaz {
+								border: 1px solid red;
+								min-height: 99%;
+								max-height: 99%;
+								min-width: 99%;
+								max-width: 99%;
+								text-align: center;
+								top: 0;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								margin: auto;
+								position: absolute;
+									}
+                           img {
+								border: 1px solid green;
+								min-width: 99%;
+								min-height:99%;
+								max-height: 99%;
+								max-width: 99%;
+								position: absolute;
+								top: 0;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								margin: auto;
+								}
+                            #fascia:first-of-type::-webkit-inner-spin-button, 
+							#fascia:first-of-type::-webkit-outer-spin-button
+                                 {-webkit-appearance: none; 
+									margin: 0; }
+							#rotoli:first-of-type::-webkit-inner-spin-button, 
+							#rotoli:first-of-type::-webkit-outer-spin-button
+                                 {-webkit-appearance: none; 
+									margin: 0; }
+                            #rotoliperpiano:first-of-type::-webkit-inner-spin-button, 
+							#rotoliperpiano:first-of-type::-webkit-outer-spin-button
+                                 {-webkit-appearance: none; 
+									margin: 0; }
+							input:focus {
+								background-color: lightgreen;
+										}
+										
+								 input[type="number"] {
+    -moz-appearance: textfield;}			
+		</style>
+		<title>operatore</title>
+	</head>
+		<body bgcolor="beige" onload="all()"   >
+			<div id="pics"  ondblclick="mout()" onmouseover="md()">
+                		<img id="valentina" src="../image/7.jpg"  "width="100%" height="100%" >
+			</div>
+			<div id="cal" class="leonaromaz" ondblclick="mover()"    >
+				 <center>
+                 			 <table>
+                    				<tr align="right">
+                       				 <td width="150" align="left">
+							<b><font id="a" color="blue"size ="4">fascia</font>
+						</td>
+		   				<td width="200"> 
+							#<input id="fascia" type="number" min="1" maxlength="4" size="7" autocomplete="off"  onchange="calculate()">
+		 				</td>
+                 				</tr> 
+						<tr align="right">
+						<td width="150" align="left">
+							<b><font id="a" color="blue"size ="4">rotoli</font>
+						</td>
+		   				<td width="200"> 
+							#<input id="rotoli" type="number" min="1" maxlength="4" size="7" autocomplete="off" onchange="calculate()">
+		 				</td>
+						</tr>
+						<br>
+						<tr align="right">
+		   				<td width="150" align="left">
+							<b><font  id="b"color="blue"size ="4">rotoli/piano</font> 
+						</td>
+						<td width="200">			
+							#<input id="rotoliperpiano" type="number" min="1" maxlength="4" size="7" autocomplete="off" onchange="calculate()">
+						</td>		
+						</tr>
+						<br>
+						<tr align="right">
+						<td width="150" align="left">
+							<b><font color="blue"size ="4">numeri bancale</font> 
+						</td>
+						<td width="200">
+							#<input id="numerobancale" type="number"min="1" maxlength="5" size="7"autocomplete="off"onchange="calculate()" value="1">
+						</td>
+						</tr>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<tr align="right">
+						<td width="150" align="left">
+							<b><font color="green" size="4">altezza </font>
+						</td>
+						<td width="200">
+						<b id="altezza"><font color="red"size ="4">mm</font>
+						</td>
+						</tr>
+						<br>
+						<tr align="right">
+						<td width="150" align="left">
+							<b><font color="green"size ="4">rotoli per bancale</font> 
+						</td>
+						<td width="200">
+							<b id="rotolibancale"><font color="red"size ="4">rot.</font>	
+						</td>
+						</tr>
+						<br>
+						<tr align="right">
+						<td width="150" align="left">
+							<b><font color="green"size ="4">rotoli/pila</font>
+						</td>
+						<td width="200">
+							<b id="pila"><font color="red"size ="4">rot.</font>
+						</td>
+						</tr>
+                				<br>
+						<tr align="right">
+						<td width="150" align="left">
+							<b><font color="green"size ="4">remainder</font>
+						</td>
+						<td width="200">
+							<b id="remainder"><font color="red"size ="4">rot.</font>
+						</td>
+						</tr>
+             				</table>
+				</center>	
+						<!---<button type="button" onclick="reSet()">SET</button>--->
+                                                <select 	id="valen"  onchange="tina()">
+ 							 <option value="A">A</option>
+  							 <option value="B">B</option>
+  							 <option value="C">C</option>
+  							 <option value="D">D</option>
+                                                         <option value="E">E</option>
+                                                         <option value="L">L</option>
+						</select>
+			</div>
+			
+			<section style="margin-top:10px">
+ 
+						</section>
+			
+	</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	
+	<title>Sheet Calculator</title>
+	
+		<script>
+			function turgut()
+					{					
+					if (sessionStorage.getItem("benincasa")!=="") {
+							document.getElementById("turgut").style.display="block"
+							document.getElementById("mimmo").style.display="none"
+  							document.getElementById("ricardo").innerHTML =sessionStorage.getItem("benincasa");
+							}
+					
+							
+							
+					}
+					
+			function mimmo()
+					{
+					        document.getElementById("mimmo").style.display="block"
+							document.getElementById("turgut").style.display="none"
+					
+					}
+	   
+	
+		</script>
+
+	
+		<style>  input[type=number]:first-of-type::-webkit-inner-spin-button, 
+				 input[type=number]:first-of-type::-webkit-outer-spin-button{ 
+				 -webkit-appearance: none; 
+				 margin: 0; }
+				 
+				 input:focus {
+				background-color: pink;
+				
+}				input[type="number"] {
+    -moz-appearance: textfield;}
+		</style>
+
+	
+		<title>Formato</title>
+		
+	</head>
+	
+	<body bgcolor="#E10E9FA" onload="mimmo()">
+	
+	
+	<div id="mimmo"  ondblclick="turgut()"    >
+
+	<center>
+	     
+	    
+	
+		<h1 id="martina"><center><font color="green"> FORMATO</font></center></h1>
+		<br>
+		
+	    <table>
+		<tr align="right">
+			<td width="200" align="left">
+				<b><font id="a" color="blue"size ="4">Lungezza</font>
+			</td>
+		   	<td width="300"> 
+				mm<input id="lungezza" type="number" onkeypress="lungezzas(event)"min="0" maxlength="10" style="font-size:20px" autocomplete="off">
+		 	</td>
+		</tr>
+		<br>
+		<tr align="right">
+		   	<td width="200" align="left">
+				<b><font  id="b"color="blue"size ="4">Largezza</font> 
+			</td>
+			<td width="300">			
+				mm<input id="largezza" type="number" onkeypress="largezzas(event)"min="0" maxlength="4" style="font-size:20px" autocomplete="off">
+			</td>		
+ 		
+		</tr>
+		<br>
+		<tr align="right">
+			<td width="200" align="left">
+
+				<b><font color="blue"size ="4">Numeri fogli</font> 
+			</td>
+			<td width="300">
+				qty<input id="fogli" type="number" onkeypress="foglis(event)"min="0" maxlength="10" style="font-size:20px" autocomplete="off">
+			</td>
+		</tr>
+		<br>
+		<tr align="right">
+			<td width="200" align="left">
+				<b><font color="red"size ="4">Metri quadrati</font>
+			</td>
+			<td width="300">
+
+				mq<input id="fquadrate" type="number" onkeypress="fquadrates(event)"min="0" maxlength="10" style="font-size:20px" autocomplete="off">
+			</td>
+
+		</tr>
+		<br>
+		<tr align="right">
+			<td width="200" align="left">
+
+				<b><font color="blue"size ="4">grammi</font> 
+			</td>
+			<td width="350">
+
+				gr<input id="fgrammi" type="number"onkeypress="fgrammis(event)" min="0" maxlength="3" style="font-size:20px" autocomplete="off">	
+			</td>
+		</tr>
+		<br>
+		<tr align="right">
+			<td width="200" align="left">
+				<b><font color="blue"size ="4">kilogrami</font>
+			</td>
+			<td width="300">
+				kg<input id="fkilo" type="number" onkeypress="fkilos(event)"min="0" maxlength="10" style="font-size:20px">
+			</td>
+		</tr>
+
+
+
+		<script src="../js/formato.js"></script>
+
+		
+          </table>
+	</center>
+		
+	</div>	
+
+	<div id="turgut" onmouseout="mimmo()" >
+	
+		<p id="ricardo" style="font-size:70px; color:darkred;"  > </p>
+	
+	</div>
+
+		
+
+	</body>
+		<script  type="text/javascript" src="../js/fiesta.js"></script>
+		<script  type="text/javascript" src="../js/nameflash.js"></script>
+	
+	
+</html>
+
+

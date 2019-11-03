@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html >
+	<head>
+		
+		 <title>Roll Calculator</title>
+	
+		<style>  input[type=number]:first-of-type::-webkit-inner-spin-button, 
+				 input[type=number]:first-of-type::-webkit-outer-spin-button{ 
+				 -webkit-appearance: none; 
+				 margin: 0; }
+				 input:focus {
+				background-color: lightblue;}
+				input[type="number"] {
+    -moz-appearance: textfield;}
+				
+		</style>
+		
+	      
+
+	
+		<title>Carte Dozio</title>
+		
+	</head>
+	
+	<body bgcolor="#E10E9FA">
+	
+	
+	
+	
+	
+		<h1 id="ale"><center><font color="green"> ROTOLO</font></center></h1>	
+
+		
+		
+		
+		
+
+
+                                <select  id= "cartedozio" onchange="chosen(),redirect()">
+  				<option value="leon">Carte Dozio</option>
+  				
+				</select>
+
+                               <button type="button" onclick="reSet()">RESET</button>
+			
+			<div id="div1"></div>
+	
+		<br>
+		
+		
+		
+  
+
+
+
+				
+				
+					
+	<div class="valen" >
+		<center>
+				
+		<table >
+				</tr>
+			
+			<tr align="right">
+				<td width="200" align="left">
+					<b><font color="blue" size ="4">Anima dia. est.</font>
+				</td>		
+				<td width="350">
+					mm<input id="anima" type="number"  onkeydown="animas(event)" min="0" maxlength="3" style="font-size:20px" autocomplete="off">
+				</td>
+			</tr>
+			
+			<tr align="right">
+				<td width="200" align="left">
+					<b><font color="blue"size ="4">Spessore di mat.</font> 
+				</td>
+				<td width="350">
+					um<input id="spessore" type="number" onkeydown="spessores(event)" min="0" maxlength="3" style="font-size:20px"autocomplete="off">
+				</td>
+			</tr>
+			
+			<tr align="right">
+				<td width="200" align="left">
+					<b><font color="blue"size ="4">Dia. est. di rotolo</font> 
+				</td>
+				<td width="350">
+
+					mm<input id="diametro" type="number" onkeydown="diametros(event)" min="0" maxlength="5" style="font-size:20px"autocomplete="off">
+				</td>
+	
+			</tr>
+			
+			<tr align="right">
+						
+				<td width="200" align="left">
+					<b><font color="red"size ="4">Metri</font>
+				</td>
+				<td width="350">
+					m<input id="metri" type="number" onkeydown="metris(event)"min="0" maxlength="10" style="font-size:20px"autocomplete="off" onfocusout=sessionStorage.setItem("passMeter",metri.value)>
+				</td>
+			</tr>
+			
+			<tr align="right">
+				<td width="200" align="left">
+					<b><font color="blue"size ="4">Faccia di rotolo</font>
+				</td>
+				<td width="350">
+					mm<input id="faccia" type="number" onkeydown="faccias(event)"min="0" maxlength="4" style="font-size:20px"autocomplete="off"onfocusout=sessionStorage.setItem("passAlt",faccia.value)>
+				</td>
+			</tr>
+			
+			<tr align="right">
+				<td width="200" align="left">
+					<b><font color="blue"size ="4">Numeri di rotoli</font>
+				</td>
+ 				<td width="350">
+					qty<input id="numeri" type="number" onkeydown="numeris(event)"min="0" maxlength="10" style="font-size:20px"autocomplete="off">
+				</td>
+			</tr>
+			
+			<tr align="right">
+				<td width="200" align="left">
+
+					<b><font color="red"size ="4">Metri quadrati</font>
+				</td>
+				<td width="350">
+					mq<input id="quadrate" type="number" onkeydown="quadrates(event)"min="0" maxlength="10" style="font-size:20px"autocomplete="off">
+				</td>
+			</tr>
+			
+			<tr align="right">
+				<td width="200" align="left">
+					<b><font color="blue"size ="4">grammi</font> 
+				</td>
+				<td width="350">
+					gr<input id="grammi" type="number"onkeydown="grammis(event)" min="0" maxlength="5" style="font-size:20px"autocomplete="off"onfocusout=sessionStorage.setItem("passGram",grammi.value)>
+				</td>
+			</tr>				
+			
+			<tr align="right">
+				<td width="200" align="left">	
+					<b><font color="blue"size ="4">kilogrami</font> 
+				</td>
+				<td width="350">
+					kg<input id="kilo" type="number" onkeydown="kilos(event)"min="0" maxlength="10" style="font-size:20px"autocomplete="off">
+				</td>
+			
+			</tr>
+
+
+		</table>
+	</center>
+	</div>
+	
+	
+	
+	
+	         
+	
+		<script type="text/javascript" src="../js/java_rotoli.js"></script>
+		<script  type="text/javascript" src="../js/bangkero.js"></script>
+		<script  type="text/javascript" src="../js/greetings.js"></script> 
+		<script  type="text/javascript" src="../js/fiesta.js"></script>
+		
+	</body>
+	
+	
+</html>
+
+
